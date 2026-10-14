@@ -1,0 +1,58 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+# A tibble: 3 × 2
+  ACTARM                   n
+  <chr>                <int>
+1 Placebo                 86
+2 Xanomeline High Dose    72
+3 Xanomeline Low Dose     96
+[1] 1122
+[1] 217
+# A tibble: 3 × 2
+  ACTARM                   n
+  <chr>                <int>
+1 Placebo                281
+2 Xanomeline High Dose   414
+3 Xanomeline Low Dose    427
+file:////var/folders/n9/f7z3n5yx29q64hy7p3vkpjtw0000gn/T//RtmpKbK71R/file13a32262357c2.html screenshot completed
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.5.2
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.2.1           gt_1.3.0              pharmaverseadam_1.3.0
+[4] gtsummary_2.6.1      
+
+loaded via a namespace (and not attached):
+ [1] jsonlite_2.0.0   compiler_4.6.1   promises_1.5.0   Rcpp_1.1.2      
+ [5] tidyselect_1.2.1 xml2_1.6.0       webshot2_0.1.2   later_1.4.8     
+ [9] tidyr_1.3.2      fastmap_1.2.0    R6_2.6.1         commonmark_2.0.0
+[13] cards_0.9.0      generics_0.1.4   knitr_1.52       tibble_3.3.1    
+[17] pillar_1.11.1    rlang_1.3.0      websocket_1.4.4  utf8_1.2.6      
+[21] litedown_0.11    xfun_0.61        fs_2.1.0         sass_0.4.10     
+[25] otel_0.2.0       cli_3.6.6        withr_3.0.3      magrittr_2.0.5  
+[29] processx_3.9.0   digest_0.6.39    markdown_2.0     lifecycle_1.0.5 
+[33] chromote_0.5.1   vctrs_0.7.3      evaluate_1.0.5   glue_1.8.1      
+[37] purrr_1.2.2      tools_4.6.1      pkgconfig_2.0.3  htmltools_0.5.9 

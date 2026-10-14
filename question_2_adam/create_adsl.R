@@ -1,6 +1,6 @@
 
 
-# Program : create_ßADSL.R
+# Program : create_adsl.R
 # Purpose : Create ADaM ADSL dataset using admiral package
 # Inputs : pharmaversesdtm::dm, vs, ex, ds, ae
 # Output : question_2_adam/adsl.rds, adsl.csv
@@ -113,10 +113,12 @@ count(adsl2, ARM, has_trtsdtm = !is.na(TRTSDTM))
 
 ####ITTFL
 
-#Spec mentions  =Y if DM.ARM ^= '' , else N 
-
-
-adsl3 <- adsl2 %>% mutate(ITTFL=if_else(!is.na(ARM),"Y","N"))
+# Spec: "Y" if DM.ARM not missing, else "N"; described as flagging randomized subjects.
+# In pharmaversesdtm::dm, screen failures have ARM = "Screen Failure" (not missing,
+# older SDTM convention), so the literal rule would flag all 306 subjects as "Y".
+# Following the intended definition: screen failures are excluded -> 254 Y / 52 N.
+adsl3 <- adsl2 %>%
+  mutate(ITTFL = if_else(!is.na(ARM) & ARM != "Screen Failure", "Y", "N"))
 
 #check
 count(adsl3, ARM, ITTFL)

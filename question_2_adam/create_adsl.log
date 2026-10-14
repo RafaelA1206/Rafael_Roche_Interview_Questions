@@ -57,7 +57,7 @@ The following objects are masked from ‘package:base’:
   ARM                  ITTFL     n
   <chr>                <chr> <int>
 1 Placebo              Y        86
-2 Screen Failure       Y        52
+2 Screen Failure       N        52
 3 Xanomeline High Dose Y        84
 4 Xanomeline Low Dose  Y        84
 # A tibble: 10 × 4

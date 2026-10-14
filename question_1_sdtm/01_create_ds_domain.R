@@ -30,7 +30,7 @@ ds_raw <- pharmaverseraw::ds_raw
 dm<- pharmaversesdtm::dm
 
 #Controlled terminology
-study_ct <- read_ct_spec("sdtm_ct.csv")
+study_ct <- read_ct_spec("question_1_sdtm/sdtm_ct.csv")
 
 
 

@@ -1,0 +1,160 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+# A tibble: 6 × 16
+  oak_id raw_source patient_number STUDY      PATNUM SITENM INSTANCE FORM  FORML
+   <int> <chr>      <chr>          <chr>      <chr>  <chr>  <chr>    <chr> <chr>
+1      1 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Baseline DISC1 Subj…
+2      2 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Week 26  DISC1 Subj…
+3      3 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Week 26  DISC1 Subj…
+4      4 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Baseline DISC1 Subj…
+5      5 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Week 4   DISC1 Subj…
+6      6 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Week 4   DISC1 Subj…
+# ℹ 7 more variables: IT.DSTERM <chr>, IT.DSDECOD <chr>, OTHERSP <chr>,
+#   DSDTCOL <chr>, DSTMCOL <chr>, IT.DSSTDAT <chr>, DEATHDT <chr>
+# A tibble: 6 × 13
+  STUDY  PATNUM SITENM INSTANCE FORM  FORML IT.DSTERM IT.DSDECOD OTHERSP DSDTCOL
+  <chr>  <chr>  <chr>  <chr>    <chr> <chr> <chr>     <chr>      <chr>   <chr>  
+1 CDISC… 701-1… CDISC… Baseline DISC1 Subj… Randomiz… Randomized <NA>    01-02-…
+2 CDISC… 701-1… CDISC… Week 26  DISC1 Subj… Protocol… Completed  <NA>    07-02-…
+3 CDISC… 701-1… CDISC… Week 26  DISC1 Subj… <NA>      <NA>       Final … 07-02-…
+4 CDISC… 701-1… CDISC… Baseline DISC1 Subj… Randomiz… Randomized <NA>    08-05-…
+5 CDISC… 701-1… CDISC… Week 4   DISC1 Subj… Adverse … Adverse E… <NA>    09-02-…
+6 CDISC… 701-1… CDISC… Week 4   DISC1 Subj… <NA>      <NA>       Final … 09-02-…
+# ℹ 3 more variables: DSTMCOL <chr>, IT.DSSTDAT <chr>, DEATHDT <chr>
+[1] TRUE
+[1] 0
+[1] "oak_id"         "raw_source"     "patient_number" "DSTERM"        
+ℹ These terms could not be mapped per the controlled terminology: "Randomized", "Completed", "Study Terminated by Sponsor", "Screen Failure", and "Lost to Follow-Up".
+# A tibble: 3 × 2
+  DSCAT                  n
+  <chr>              <int>
+1 DISPOSITION EVENT    306
+2 OTHER EVENT          290
+3 PROTOCOL MILESTONE   254
+[1] 0
+# A tibble: 6 × 16
+  oak_id raw_source patient_number STUDY      PATNUM SITENM INSTANCE FORM  FORML
+   <int> <chr>      <chr>          <chr>      <chr>  <chr>  <chr>    <chr> <chr>
+1      1 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Baseline DISC1 Subj…
+2      2 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Week 26  DISC1 Subj…
+3      3 ds_raw     701-1015       CDISCPILO… 701-1… CDISC… Week 26  DISC1 Subj…
+4      4 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Baseline DISC1 Subj…
+5      5 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Week 4   DISC1 Subj…
+6      6 ds_raw     701-1023       CDISCPILO… 701-1… CDISC… Week 4   DISC1 Subj…
+# ℹ 7 more variables: IT.DSTERM <chr>, IT.DSDECOD <chr>, OTHERSP <chr>,
+#   DSDTCOL <chr>, DSTMCOL <chr>, IT.DSSTDAT <chr>, DEATHDT <chr>
+# A tibble: 10 × 3
+   IT.DSSTDAT DSDTCOL    DSTMCOL
+   <chr>      <chr>      <chr>  
+ 1 01-02-2014 01-02-2014 <NA>   
+ 2 07-02-2014 07-02-2014 <NA>   
+ 3 07-02-2014 07-02-2014 11:45  
+ 4 08-05-2012 08-05-2012 <NA>   
+ 5 09-02-2012 09-02-2012 <NA>   
+ 6 09-02-2012 09-02-2012 10:15  
+ 7 02-18-2013 02-18-2013 <NA>   
+ 8 07-19-2013 07-19-2013 <NA>   
+ 9 01-14-2014 01-14-2014 <NA>   
+10 01-14-2014 01-14-2014 11:10  
+# A tibble: 10 × 2
+   DSSTDTC    DSDTC           
+   <iso8601>  <iso8601>       
+ 1 2014-01-02 2014-01-02      
+ 2 2014-07-02 2014-07-02      
+ 3 2014-07-02 2014-07-02T11:45
+ 4 2012-08-05 2012-08-05      
+ 5 2012-09-02 2012-09-02      
+ 6 2012-09-02 2012-09-02T10:15
+ 7 2013-02-18 2013-02-18      
+ 8 2013-07-19 2013-07-19      
+ 9 2014-01-14 2014-01-14      
+10 2014-01-14 2014-01-14T11:10
+ℹ These terms could not be mapped per the controlled terminology: "Ambul Ecg Removal", "Unscheduled 6.1", "Unscheduled 1.1", "Unscheduled 5.1", "Unscheduled 4.1", "Unscheduled 8.2", and "Unscheduled 13.1".
+ℹ These terms could not be mapped per the controlled terminology: "Ambul Ecg Removal", "Unscheduled 6.1", "Unscheduled 1.1", "Unscheduled 5.1", "Unscheduled 4.1", "Unscheduled 8.2", and "Unscheduled 13.1".
+# A tibble: 19 × 3
+   VISIT             VISITNUM     n
+   <chr>                <dbl> <int>
+ 1 AMBUL ECG REMOVAL      6       4
+ 2 BASELINE               3     254
+ 3 RETRIEVAL            201      37
+ 4 SCREENING 1            1      57
+ 5 UNSCHEDULED 1.1        1.1     2
+ 6 UNSCHEDULED 13.1      13.1     1
+ 7 UNSCHEDULED 4.1        4.1     1
+ 8 UNSCHEDULED 5.1        5.1     1
+ 9 UNSCHEDULED 6.1        6.1     1
+10 UNSCHEDULED 8.2        8.2     2
+11 WEEK 12                9      51
+12 WEEK 16               10      33
+13 WEEK 2                 4      46
+14 WEEK 20               11      27
+15 WEEK 24               12      14
+16 WEEK 26               13     219
+17 WEEK 4                 5      27
+18 WEEK 6                 7      42
+19 WEEK 8                 8      31
+[1] 0
+# A tibble: 1 × 3
+  STUDYID      DOMAIN     n
+  <chr>        <chr>  <int>
+1 CDISCPILOT01 DS       850
+[1] "01-701-1015" "01-701-1015" "01-701-1015" "01-701-1023" "01-701-1023"
+[6] "01-701-1023"
+[1] 0
+# A tibble: 10 × 5
+   USUBJID     DSSEQ DSDECOD               DSSTDTC    DSSTDY
+   <chr>       <int> <chr>                 <date>      <int>
+ 1 01-701-1015     1 RANDOMIZED            2014-01-02      1
+ 2 01-701-1015     2 COMPLETED             2014-07-02    182
+ 3 01-701-1015     3 FINAL LAB VISIT       2014-07-02    182
+ 4 01-701-1023     1 RANDOMIZED            2012-08-05      1
+ 5 01-701-1023     2 ADVERSE EVENT         2012-09-02     29
+ 6 01-701-1023     3 FINAL LAB VISIT       2012-09-02     29
+ 7 01-701-1023     4 FINAL RETRIEVAL VISIT 2013-02-18    198
+ 8 01-701-1028     1 RANDOMIZED            2013-07-19      1
+ 9 01-701-1028     2 COMPLETED             2014-01-14    180
+10 01-701-1028     3 FINAL LAB VISIT       2014-01-14    180
+[1] 52
+[1] 0
+# A tibble: 1 × 3
+  DSDECOD        missing_RFSTDTC     n
+  <chr>          <lgl>           <int>
+1 SCREEN FAILURE TRUE               52
+tibble [850 × 12] (S3: tbl_df/tbl/data.frame)
+ $ STUDYID : chr [1:850] "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
+ $ DOMAIN  : chr [1:850] "DS" "DS" "DS" "DS" ...
+ $ USUBJID : chr [1:850] "01-701-1015" "01-701-1015" "01-701-1015" "01-701-1023" ...
+ $ DSSEQ   : int [1:850] 1 2 3 1 2 3 4 1 2 3 ...
+ $ DSTERM  : chr [1:850] "Randomized" "Protocol Completed" "Final Lab Visit" "Randomized" ...
+ $ DSDECOD : chr [1:850] "RANDOMIZED" "COMPLETED" "FINAL LAB VISIT" "RANDOMIZED" ...
+ $ DSCAT   : chr [1:850] "PROTOCOL MILESTONE" "DISPOSITION EVENT" "OTHER EVENT" "PROTOCOL MILESTONE" ...
+ $ VISITNUM: num [1:850] 3 13 13 3 5 5 201 3 13 13 ...
+ $ VISIT   : chr [1:850] "BASELINE" "WEEK 26" "WEEK 26" "BASELINE" ...
+ $ DSDTC   : chr [1:850] "2014-01-02" "2014-07-02" "2014-07-02T11:45" "2012-08-05" ...
+ $ DSSTDTC : chr [1:850] "2014-01-02" "2014-07-02" "2014-07-02" "2012-08-05" ...
+ $ DSSTDY  : int [1:850] 1 182 182 1 29 29 198 1 180 180 ...
+# A tibble: 13 × 3
+   DSCAT              DSDECOD                         n
+   <chr>              <chr>                       <int>
+ 1 DISPOSITION EVENT  ADVERSE EVENT                  92
+ 2 DISPOSITION EVENT  COMPLETED                     110
+ 3 DISPOSITION EVENT  DEATH                           3
+ 4 DISPOSITION EVENT  LACK OF EFFICACY                4
+ 5 DISPOSITION EVENT  LOST TO FOLLOW-UP               2
+ 6 DISPOSITION EVENT  PHYSICIAN DECISION              3
+ 7 DISPOSITION EVENT  PROTOCOL VIOLATION              6
+ 8 DISPOSITION EVENT  SCREEN FAILURE                 52
+ 9 DISPOSITION EVENT  STUDY TERMINATED BY SPONSOR     7
+10 DISPOSITION EVENT  WITHDRAWAL BY SUBJECT          27
+11 OTHER EVENT        FINAL LAB VISIT               254
+12 OTHER EVENT        FINAL RETRIEVAL VISIT          36
+13 PROTOCOL MILESTONE RANDOMIZED                    254
